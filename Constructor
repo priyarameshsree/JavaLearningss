@@ -1,0 +1,19 @@
+package javaProgram;
+
+public class Student {
+String student_name;
+int sno;
+long SRollno;
+float Marks;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Student student=new Student();
+		System.out.println(student.student_name);
+		System.out.println(student.sno);
+		System.out.println(student.SRollno);
+		System.out.println(student.Marks);
+	}
+
+}
