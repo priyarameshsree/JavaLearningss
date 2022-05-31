@@ -17,3 +17,101 @@ float Marks;
 	}
 
 }
+//no argument constructor
+package javaProgram;
+
+public class Employee {
+	String Employeename;
+	int Empno;
+	float sal;
+	int age;
+	String Location;
+	long Phneno;
+	
+	Employee(){//No argument constructor
+		Employeename="priya";
+		Empno=777;
+		sal=20000.00f;
+		age=23;
+		Location="Chennai";
+		Phneno=77778886654l;
+		
+		System.out.println("Details stored");
+	}
+public String Employeedet() {
+	System.out.println("Thank for search");
+	return Employeename;
+}
+private int employenumber() {
+System.out.println("The Employee Number is:xxxxxx");
+return Empno;
+}
+private float Mysal() {
+	System.out.println("Your salary is");
+	return sal;
+}
+	private int Empage() {
+		System.out.println("The Employee Age is : xx");
+		return age;
+	}
+	private String MyLocation() {
+		System.out.println("Our employee Location is:");
+		return Location;
+	}
+	private long Mobilenum() {
+		System.out.println("The Employee num is:xxxxxxxxxxxxx");
+		return Phneno;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Employee employee=new Employee();
+String name=employee.Employeedet();
+System.out.println("My name is :"+name);
+//find the employee number
+int num=employee.employenumber();
+System.out.println("The Employee num is:"+num);
+//Employee salry
+employee.Mysal();
+float salr=employee.Mysal();
+System.out.println(salr);
+//find the age
+int agee=employee.Empage();
+System.out.println("The employee Age is:"+agee);
+//find the location
+String loc=employee.MyLocation();
+System.out.println("The current location is"+loc);
+long Mobileno=employee.Mobilenum();
+System.out.println("The Mobile num is"+Mobileno);
+
+
+	}
+
+}
+//Argument constructor or parametrized constructor
+package javaProgram;
+
+public class ArgumentConstructor {
+	String name;
+	int age;
+	String place;
+	float sal;
+	ArgumentConstructor(String personname,int personage){//parametrized constructor
+		name=personname;
+		age=personage;
+	}
+	public void Displaydetails() {
+		System.out.println("Beautiful name is" +name+ " and  age is" +age);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArgumentConstructor argumentConstructor=new ArgumentConstructor("priya",25);//passing the values using arguments
+		argumentConstructor.Displaydetails();
+		//printing default constructor value
+		System.out.println(argumentConstructor.place);
+		System.out.println(argumentConstructor.sal);
+		ArgumentConstructor argc=new ArgumentConstructor("Ramesh",55);
+		argc.Displaydetails();
+	}
+
+}
