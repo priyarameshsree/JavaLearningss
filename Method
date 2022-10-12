@@ -43,4 +43,81 @@ public class YouTuber {
 	}
 	}
 
+//another example using method(public,private,default,protected -Access Modifier
+
+package javaPractice;
+
+public class BacnkAccountcr {
+	String name="Banupriya";
+	String DOB="07/07/1996";
+	long accountnumber=7654321987808l;
+	int deposit=400000;
+	float years=3.5f;
+	float interest=10.10f;
+    double amount=600000.234555;
+    String designation="SoftwareTester";
+    String Location="Chennai";
+    
+    public void SelectBank() {
+    	System.out.println("AAAAA bank");
+    }
+    private String CollectDetails() {
+    	System.out.println("The Account holder details are:");
+    	return name;
+    	
+    }
+    private long Acntnumer() {
+    	System.out.println("The account number is");
+    	return accountnumber;
+    }
+    private int depositAmt() {
+    	System.out.println("The deposit amount is:");
+    	return deposit;
+    }
+    private float NumberofYears() {
+    	System.out.println("The number of years is ");
+    	return interest;
+    }
+    private double EarnedAmount() {
+    	System.out.println("After completion of particular years");
+    	return amount;
+    }
+    public float benfitamount() {
+    	System.out.println("The interest amount is");
+    	return interest;
+    }
+     String Workingrole() {
+    	 System.out.println("The working role as a");
+    	 return designation;
+    	 
+     }
+     protected String WorkingPlace() {
+    	 System.out.println("The Working Location");
+    	 return Location;
+     }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BacnkAccountcr bacnkAccountcr=new BacnkAccountcr();
+		System.out.println("Bank account details are");
+		bacnkAccountcr.SelectBank();
+		String acname=bacnkAccountcr.CollectDetails();
+		System.out.println(acname);
+		long acnum=bacnkAccountcr.Acntnumer();
+		System.out.println(acnum);
+		int deptamt=bacnkAccountcr.depositAmt();
+		System.out.println(deptamt);
+		float Years=bacnkAccountcr.NumberofYears();
+		System.out.println(Years);
+		float intrst=bacnkAccountcr.benfitamount();
+		System.out.println(intrst);
+		double amount=bacnkAccountcr.EarnedAmount();
+		System.out.println(amount);
+		String job=bacnkAccountcr.Workingrole();
+		System.out.println(job);
+		String place=bacnkAccountcr.WorkingPlace();
+		System.out.println(place);
+
+	}
+
+}
 
