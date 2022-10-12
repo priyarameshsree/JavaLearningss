@@ -1,0 +1,46 @@
+package javaPractice;
+
+public class YouTuber {
+	int salary=50000;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		YouTuber youTuber=new YouTuber();//constructor or create the object of the class
+		youTuber.createVideo();
+		String crt=youTuber.createVideo();
+		System.out.println(crt);
+		Boolean upload=youTuber.UploadVideo();
+		System.out.println(upload);
+		String cmnts=youTuber.uploadComments();
+		System.out.println(cmnts);
+		String share=youTuber.ShareVideo();
+		System.out.println(share);
+		int income=youTuber.incomeamouunt();
+		System.out.println(income);
+		youTuber.deleteVideo();
+		}
+	public String createVideo() {
+		System.out.println("Successfully video created");
+		return "YouTubeVideo";
+	}
+	private Boolean UploadVideo() {
+		System.out.println("Successfully vidoe uploaded in Youtube");
+		return true;
+	}
+	public String uploadComments() {
+		System.out.println("Peoples are welcome to upload the commetns");
+		return "Thanks for comments";
+	}
+	private int incomeamouunt() {
+		System.out.println("The income earned by the youtube is:");
+		return salary;
+	}
+	public String ShareVideo() {
+		System.out.println("Video shared by public");
+		return "Thanks for sharing";
+	}
+	private void deleteVideo() {
+		System.out.println("The video is deleted");
+	}
+	}
+
+
