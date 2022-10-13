@@ -22,3 +22,25 @@ public static long maximum(long a,long b,long c) {
 	return Math.max(Math.max(a, b), c);
 }
 }
+//find the minimum number using method (gettng inputs from user)
+package javaPractice;
+import java.util.Scanner;
+
+public class FindMinnum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in=new Scanner(System.in);
+		System.out.println("Enter the first number");
+		int a=in.nextInt();
+		System.out.println("Enter the second number");
+		int b=in.nextInt();
+		System.out.println("Enter the third number");
+		int c=in.nextInt();
+		System.out.println("The smallest value is"+smallest(a,b,c)+"\n");
+		
+	}
+public static int smallest(int a,int b,int c ) {
+	return Math.min(Math.min(a, b),c);
+}
+}
