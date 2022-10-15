@@ -1,0 +1,19 @@
+package javaPractice;
+
+public class Addition {
+	int c=20;//global variable van access anywhere in the class {global variable or instance variable)
+	public void AddNumbers(int a,int b) {
+		int c=30;//local variable must to initialize the value it can access only within this function or method
+		
+		System.out.println(a+b+c);//add the local variable (c)
+		System.out.println(a+b+this.c);//here we call the global variable{this keyword is used to access the global variable}
+	}
+
+	public static void main(String[] args) {
+	
+		// TODO Auto-generated method stub
+		Addition add=new Addition();
+		add.AddNumbers(20,30);
+	}
+
+}
