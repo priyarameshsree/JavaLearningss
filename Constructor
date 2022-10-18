@@ -33,6 +33,39 @@ public class Employee {
 		Empno=777;
 		sal=20000.00f;
 		age=23;
+		//Constructor overloading
+package javaPractice;
+//Default Constructor
+public class Copyconst {
+	Copyconst(){
+		System.out.println("It is the default constructor");
+		
+	}
+	//Two Argument Constructor
+	//Constructor overloading(same constructor and different arguments
+	Copyconst(int a,int b){
+		System.out.println("It is the two argument constructor"+a);
+		System.out.println("it is the second argument"+b);
+	}
+	//Three Argument Constructor
+	Copyconst(String nname,String location,int id){
+		System.out.println("It is the three argument constructor first"+nname);
+		System.out.println("it is the second argument of String"+location);
+		System.out.println("It is the third argument of id"+id);
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//call the constructor using object reference variable
+		Copyconst obj=new Copyconst();
+		Copyconst obj1=new Copyconst(10,20);
+		Copyconst obj2=new Copyconst("priya","Banglore",23);
+
+	}
+
+}
+
 		Location="Chennai";
 		Phneno=77778886654l;
 		
