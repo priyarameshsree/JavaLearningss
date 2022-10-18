@@ -33,6 +33,45 @@ public class YouTuber {
 	private int incomeamouunt() {
 		System.out.println("The income earned by the youtube is:");
 		return salary;
+		
+		//another example for constructor program
+		package javaPractice;
+//Default Constructor
+public class Copyconst {
+	int number;
+	String name;
+	String location;
+	int sal=5000;
+	public Copyconst() {
+		int number=5;
+		String name="Agavan";
+		System.out.println("The number is:"+number);
+		System.out.println("The name is:"+name);
+	}
+	public Copyconst(String place,String name) {
+		System.out.println("Two argument constructor is:"+place);
+		System.out.println("My name is :"+name);
+	}
+	public int Mysalry() {
+		System.out.println("The Salry is :"+sal);
+		return sal;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//call the constructor using object reference variable
+		Copyconst obj=new Copyconst() ;
+		Copyconst obj1=new Copyconst("delhi","ooty");
+		Copyconst obj2=new Copyconst();
+		int salry=obj2.Mysalry();
+		System.out.println(salry);
+		
+			
+		}
+		
+	}
+
+
+
 	}
 	public String ShareVideo() {
 		System.out.println("Video shared by public");
