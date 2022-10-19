@@ -33,6 +33,67 @@ public class Employee {
 		Empno=777;
 		sal=20000.00f;
 		age=23;
+		
+		
+		
+		//constructor(issue having this code)
+package javaPractice;
+
+public class Construc {
+	int empno;
+	String empname;
+	int num;
+	int errors;
+	String mname;
+	int marks;
+	String address;
+	Construc(){
+		int age=20;
+		String place="Banglore";
+		long phonenum=87777666444l;
+		System.out.println("Global variable "+empno);
+		System.out.println("Global Variable"+empname);
+		System.out.println("Age is"+age);
+		System.out.println("place is"+place);
+		System.out.println("phone num is:"+phonenum);
+	}
+	Construc(int count,int rows){
+		
+		//System.out.println("here im passing argument constructor"+count);
+		//System.out.println("here im passing argument constructor"+rows);
+		num=count;
+		errors=rows;
+	}
+	Construc(String mname,int marks,String address){
+		this.mname=mname;
+		this.marks=marks;
+		this.address=address;
+	}
+	public void display() {
+		System.out.println("Thanks for creating the constructors");
+		System.out.println("here im passing argument constructor"+num);
+		System.out.println("here im passing argument constructor"+errors);
+		System.out.println("Here the manme is:"+this.mname);
+		System.out.println("Here the marks is:"+this.marks);
+		System.out.println("Here  the address is:"+this.address);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Construc obj=new Construc();
+		Construc obj1=new Construc(100, 50);
+		obj1.display();
+		System.out.println("************");
+		Construc obj2=new Construc("Vasantha", 500, "Banglore");
+		System.out.println(obj2);
+		obj1.display();
+		
+		obj2.display();
+		
+		
+
+	}
+
+}
 		//Constructor overloading
 package javaPractice;
 //Default Constructor
