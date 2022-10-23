@@ -15,3 +15,21 @@ public class Looping {
 		}
 
 }
+package javaPractice;
+
+public class Looping {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a=100;//initialization
+		while (a>=20)//condition
+		{
+			//System.out.println("This is an example of iteration"+a);
+			System.out.println(a);
+			a--;//decrement
+			
+		}
+		}
+
+}
+
