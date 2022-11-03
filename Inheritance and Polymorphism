@@ -1,0 +1,105 @@
+#1st class
+package javaPractice;
+
+public class ConceptofInheritance extends CarModel{
+	public void CarStart() {
+		System.out.println("Car started");
+	}
+	public void CarStop() {
+		System.out.println("CarStopped");
+	}
+	public void wheels() {
+		System.out.println("Car have fourweels");
+	}
+
+}
+#2nd class
+package javaPractice;
+
+public class Conceptcar2 extends ConceptofInheritance {
+	public void CarStart() {
+		System.out.println("Car Start without petrol");
+	}
+	public void CarStop() {
+		System.out.println("Car Stop automatically");
+	}
+	public void CarAccess() {
+		System.out.println("Carfunction fully in computerized");
+	}
+
+}
+#3 rd class
+package javaPractice;
+
+public class Audicar extends ConceptofInheritance {
+public void Design() {
+	System.out.println("Car design nice");
+
+}
+public void CarSpeed() {
+	System.out.println("it rocks more");
+	
+}
+public void CarStart() {
+	System.out.println("give the command using mic");
+}
+}
+#4th class
+package javaPractice;
+
+public class CarModel {
+	public void Carcolour() {
+		System.out.println("Black");
+	}
+	public void CarCost() {
+		System.out.println("Highbudget");
+		
+	}
+
+}
+#Main class
+package javaPractice;
+
+public class CarMain {//has a relationship
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Audicar ac=new Audicar();
+		ac.CarSpeed();
+		ac.CarStart();
+		ac.Design();
+		ac.wheels();
+		ac.Carcolour();
+		ac.CarCost();
+		System.out.println("**********************");
+		//inheritance function used conceptcar2 child class extends the parent class of conceptofinheritance
+		//at the same time method overriding done here.Same method name ,same argument having parent and child means it gives the priority for child class--its called method overriding
+		//compile time polymorphism or static time polymorphism
+
+		Conceptcar2 cc=new Conceptcar2();
+		cc.CarAccess();
+		cc.CarStart();
+		cc.CarStop();
+		cc.wheels();
+		cc.Carcolour();
+		cc.CarCost();
+		cc.CarAccess();
+		System.out.println("*************");
+		//topcasting
+		//child class object can be refered by parent class objectreference variable  is called dynamic polymorphism or run time polymorphism
+		ConceptofInheritance co=new Audicar();
+		co.CarStart();
+		co.CarStop();
+		co.wheels();
+		co.Carcolour();
+		co.CarCost();
+		
+		//common method and over ridden method only accessable in run time polymorphism
+		//downcasting
+		//Audicar ac1=(Audicar) new ConceptofInheritance();
+		//Audicar is the child class and ac1 is child class object reference variable
+		//conceptofInheritance is parent class now not able to access.so do downcasting put the child class name in inside the bracket(it is called casting)
+
+}}
+
