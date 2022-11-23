@@ -1,0 +1,73 @@
+package javaProgram;
+
+import java.util.ArrayList;
+
+public class ArrayCopy2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//this is static array it can accept all the datatypes
+		ArrayList al=new ArrayList();
+		al.add("Priya");
+		al.add("Shree");
+		al.add(3);
+		al.add(7796);
+		al.add(20.5);
+		System.out.println(al);
+		System.out.println(al.size());
+		System.out.println(al.get(2));
+		al.add("James");
+		al.add("Jofen");
+		System.out.println(al);
+		al.remove(4);
+		System.out.println("The removed array item is:"+al);
+		//Generic type here it accpets integer only
+		ArrayList<Integer>al1=new ArrayList<Integer>();
+		al1.add(0,10);
+		al1.add(1, 20);
+		al1.add(2,30);
+		al1.add(3,30);
+		al1.add(4,40);
+		al1.add(5,50);
+		al1.add(6, 60);
+		al1.add(7,60);
+		al1.add(8,70);
+		System.out.println(al1);
+		System.out.println("The size of array is:"+al1.size());
+		for(int i=0;i<al1.size();i++) {
+			System.out.println(al1.get(i));
+		}
+		//adding another arraylist-->add al1 arraylist to al arraylist
+		al.addAll(al1);
+		System.out.println(al);
+		for(int i=0;i<al.size();i++) {
+			System.out.println(al.get(i));
+		}
+		al.remove(3);
+		System.out.println("The removed index are:"+al);
+		//here it removes al1 arraylist in al arraylist
+		al.removeAll(al1);
+		System.out.println(al);
+		ArrayList<String>al4=new ArrayList<String>();
+		al4.add("Mango");
+		al4.add("apple");
+		al4.add("Banana");
+		ArrayList<String>al5=new ArrayList<String>();
+		al5.add("Mango");
+		al5.add("Grapes");
+		al5.add("Ladies fingure");
+		al4.addAll(al5);
+		System.out.println("Adding Elements:"+al4);
+		//retain all the uncommen element not printed
+		al4.retainAll(al5);
+		System.out.println("The unmatched elements are:"+al4);
+	}
+	
+}
+
+
+
+
+
+
+
