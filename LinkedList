@@ -1,0 +1,59 @@
+package javaProgram;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class LinkedListConcept {
+	
+	
+		
+		
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<Integer>ll=new LinkedList<Integer>();
+		ll.add(10);
+		ll.add(20);
+		ll.add(30);
+		ll.add(3, 50);
+		System.out.println(ll);
+		ll.addFirst(20);
+		ll.addLast(100);
+		System.out.println(ll);
+		LinkedList<String>ll2=new LinkedList<String>();
+		ll2.add(0, "priya");
+		ll2.add(1,"Agavan");
+		ll2.add(2, "Vasantha");
+		ll2.add(3,"reyda");
+		ll2.add(4,"gooes");
+		System.out.println(ll2);
+		for(int i=0;i<ll2.size();i++) {
+			System.out.println("The array index are:"+ll2.get(i));
+		}
+		//using advance for loop
+		System.out.println("Using advanced for loop");
+		for(Integer num:ll) {
+			System.out.println(num);
+		}
+		System.out.println("Using advanced for loop for second linked list");
+		for(String str:ll2) {
+			System.out.println(str);
+		}
+		System.out.println("Using iterator");
+		Iterator<String>it=ll2.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+		System.out.println("Using iterator for ll group");
+		Iterator<Integer>it1=ll.iterator();
+		while(it1.hasNext()) {
+		System.out.println(it1.next());
+		}
+		
+	
+		
+		
+	}
+
+}
