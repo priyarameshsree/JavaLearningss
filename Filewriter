@@ -1,0 +1,66 @@
+//using filewriter
+package javaProgram;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterEg {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		//file location
+		//file contenet
+		String location="E://filewriter.txt";
+		String content="Hello priya welcome to java learning successfully add the value,Multiple line can we add in this copy of list";
+		FileWriter filewriter=new FileWriter(location);
+		filewriter.write(content);
+		filewriter.close();
+
+	}
+
+}
+//bufferedwriter
+package javaProgram;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class BufferWriterEg {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+//location
+		//contenet
+		String location="E://filewriter.txt";
+		String content="Buffer writting program";
+		FileWriter filewriter=new FileWriter(location);
+		BufferedWriter bufferedwriter=new BufferedWriter(filewriter);
+		bufferedwriter.write(content);
+		bufferedwriter.close();
+		
+	}
+
+}
+//using byte array 
+package javaProgram;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class ByteArrayeg {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		//location
+		//content
+		String location="E://filewriter.txt";
+		String content="This is example byte array program";
+		FileOutputStream fileoutputstream=new FileOutputStream(location);
+		byte[] writecode=content.getBytes();
+		fileoutputstream.write(writecode);
+		fileoutputstream.close();
+	}
+
+}
