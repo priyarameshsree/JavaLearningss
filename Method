@@ -155,6 +155,38 @@ public class BacnkAccountcr {
 		System.out.println(job);
 		String place=bacnkAccountcr.WorkingPlace();
 		System.out.println(place);
+//find the smallest number using math.min function
+package javaPractice;
+
+import java.util.Scanner;
+
+public class Smallest {
+	public int Small_num(int a,int b) {
+		return Math.min(a, b);
+	
+		
+		}
+	public static void main(String[]args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the a value");
+		int a=sc.nextInt();
+		System.out.println("Enter the b value");
+		int b=sc.nextInt();
+		Smallest small=new Smallest();
+		int result=small.Small_num(a, b);
+		System.out.println("The minimum number is:"+result);
+		
+	}
+		
+	}
+
+output:
+---------
+Enter the a value
+40
+Enter the b value
+20
+The minimum number is:20
 
 	}
 
