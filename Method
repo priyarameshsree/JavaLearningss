@@ -191,4 +191,74 @@ The minimum number is:20
 	}
 
 }
+//passing the student information
+package javaPractice;
+
+import java.util.Scanner;
+
+public class Compare {
+	int data;
+	private String Student_details() {
+		String name;
+		String place;
+		String mail_Id;
+		return "Details";
+	}
+	private int Student_details1() {
+		int sno;
+		int DOB;
+		int marks;
+		return data;
+	}
+	
+	
+	
+public static void main(String[]args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the Student  name");
+	String name=sc.nextLine();
+	System.out.println("Enter the student place");
+	String place=sc.nextLine();
+	System.out.println("enter the MailId");
+	String mail_id=sc.nextLine();
+	Compare compare=new Compare();
+	String Details=compare.Student_details();
+	System.out.println("The Student details are: "+name+  " \n"+place+" \n"+mail_id+" \n");
+	//how to display all the values which i entered
+	System.out.println("The Students personal information");
+	System.out.println("Enter the Student sno");
+	int sno=sc.nextInt();
+	System.out.println("Enter the DoB");
+	int DOB=sc.nextInt();
+	System.out.println("Enter the marks");
+	int marks=sc.nextInt();
+	int data=compare.Student_details1();
+	System.out.println("the student details are:"+sno+"\n"+DOB+"\n"+marks+"\n");
+}
+}
+
+
+output:
+---------------
+Enter the Student  name
+Banu
+Enter the student place
+Chennai
+enter the MailId
+priya@gail.com
+The Student details are: Banu 
+Chennai 
+priya@gail.com 
+
+The Students personal information
+Enter the Student sno
+33777
+Enter the DoB
+7796
+Enter the marks
+446
+the student details are:33777
+ 7796 
+446 
+
 
