@@ -48,5 +48,30 @@ public class TestPrograms{
 		}
 	}
 
+//Given number is prime number or not
+import java.util.*;
+public class TestPrograms{
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Number");
+		int num1=sc.nextInt();
+		System.out.println(num1+ "is  a primenumber" +" : "+PrimeNumber(num1));
+		}
 
+		public static boolean PrimeNumber(int number){
+			if(number<=1){
+				return false;
+			}
+			for(int i=2;i<number;i++){
+				if(number%i==0){
+					return false;
+				}
+			}
+			return true;
+
+		}
+	}
+
+
+		
 		
