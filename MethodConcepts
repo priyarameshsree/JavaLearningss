@@ -1,0 +1,28 @@
+import java.util.*;
+public class TestPrograms{
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number1");
+		int num1=sc.nextInt();
+		even(num1);
+	}
+	public static void even(int number){
+		while(number<=0){
+			System.out.println("Enter the valid number");
+			break;
+
+		}
+		if((number>0)&&(number%2==0))
+		{
+			System.out.println(number+" Is an Even number");
+		}
+		else if((number>0)&&(number%2!=0))
+		{
+			System.out.println(number+"Is an odd number");
+		}
+		}
+	}
+
+
+
+		
