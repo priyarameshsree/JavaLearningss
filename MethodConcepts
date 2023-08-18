@@ -72,6 +72,63 @@ public class TestPrograms{
 		}
 	}
 
+//grade based on marks(using while loop and if statement)
+import java.util.*;
+public class Testprograms2{
+	public static void main(String[]args){
+		int count=1;
+		
+		Scanner sc=new Scanner(System.in);
+		while(count<=5)
+		{
+		System.out.println("Enter the  mark");
+		 int num1=sc.nextInt();
+		count++;
+		Grademarks(num1);
+		
+	}
+	
+}
+
+	
+	public static void Grademarks(int marks)
+	{
+		if(marks>90)
+		{
+			System.out.println("Grade A");
+		}
+		else if(marks>80)
+		{
+			System.out.println("Grade B");
+		}
+		else if(marks>70)
+		{
+			System.out.println("Grade c");		
+		}
+		else if(marks>60)
+		{
+			System.out.println("Grade D");
+		}
+		else if(marks>50)
+		{
+			System.out.println("Grade E");
+		}
+		else 
+		{
+			System.out.println("Poor marks");
+		}
+
+		}
+	}
+
+	
+	
+
+
+
+
+		
+	
 
 		
 		
