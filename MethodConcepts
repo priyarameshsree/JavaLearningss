@@ -121,8 +121,29 @@ public class Testprograms2{
 		}
 	}
 
+//number is divisble by 3& 5	
 	
-	
+import java.util.*;
+public class Last_digit{
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number");
+		int a=sc.nextInt();
+		//Evenodd(a);
+		System.out.println(Evenodd(a));
+	}
+		public static boolean Evenodd(int number){
+			if((number%3==0)&&(number%5==0)){
+				return true;
+				
+			}
+			else{
+				return false;
+				 
+			}
+		}
+
+	}
 
 
 
