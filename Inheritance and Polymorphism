@@ -103,3 +103,43 @@ public class CarMain {//has a relationship
 
 }}
 
+//parent class
+package javaPractice;
+
+public class Animal {
+	public void makeSound() {
+		System.out.println("The animales make sound");
+	}
+
+}
+//child class
+package javaPractice;
+
+public class Animal1 extends Animal {
+	public void makeSound() {
+		System.out.println("This is from cat class");
+	}
+	public void cat_sound() {
+		System.out.println("This is own method of cat class");
+	}
+
+}
+//Main class
+package javaPractice;
+
+public class AnimalDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Animal obj=new Animal();//creating the object for parent class
+		obj.makeSound();
+		Animal1 obj1=new Animal1();
+		obj1.makeSound();
+		obj1.cat_sound();
+		Animal obj2=new Animal1();//parent class refer the child class
+		obj2.makeSound();//give the method value for child class..but not able to access own method of child class
+		Animal1 obj3=(Animal1) new Animal();//downcasting
+		obj3.makeSound();
+	}
+
+}
