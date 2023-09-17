@@ -217,5 +217,97 @@ public class EmployeeDriver {
 	}
 
 }
+//Using Bank account --parent class
+package inheritance;
+
+public class Bank {
+	private int acno;
+	private int balance;
+	public  Bank(int acno,int balance) {
+		this.acno=acno;
+		this.balance=balance;
+	}
+	
+	public int deposit(int Dep_amount) {
+		
+		balance+=Dep_amount;
+		return balance;
+		
+	}
+	public void withdraw(int amount) {
+		if(balance>amount) {
+			balance-=amount;}
+		else {
+			System.out.println("insufficient balance");
+		}
+	}
+	
+	public int getbalance() {
+		return balance;
+	}
+	}
+//child class
+package inheritance;
+
+public class SavingsAccount extends Bank{
+	public SavingsAccount(int acno,int balance) {
+		super(acno,balance);
+	}
+	public  void withdraw(int amount) {
+	if(getbalance()-amount<100) {
+		System.out.println("Please main tain the minimum balance");
+		
+	}
+	else {
+		super.withdraw(amount);
+		
+	}
+		
+	}
+	
+		
+	}
+
+
+//main class
+package inheritance;
+
+public class BankDriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Bank b=new Bank(123456789, 5500);
+		//int depositamt=b.deposit(5500);
+		System.out.println("Account balance is"+b.getbalance());
+		System.out.println("Deposit Amount for acno");
+		int depositamt=b.deposit(2000);
+		System.out.println("After depositing the amount of 2000 the balance is"+depositamt);
+		
+		
+		System.out.println("Withdrawal amount");
+		b.withdraw(10000);
+		System.out.println("After withdraw the amount of 1000 rs from 7500 is"+b.getbalance());
+		
+		SavingsAccount s1=new SavingsAccount(23456787,100) ;
+		s1.withdraw(500);
+		}
+		
+		
+
+	}
+//output
+---------
+Account balance is5500
+Deposit Amount for acno
+After depositing the amount of 2000 the balance is7500
+Withdrawal amount
+insufficient balance
+After withdraw the amount of 1000 rs from 7500 is7500
+Please main tain the minimum balance
+
+
+
+
+
 
 
