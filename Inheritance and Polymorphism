@@ -143,3 +143,79 @@ public class AnimalDriver {
 	}
 
 }
+//inheritance  parent class
+package inheritance;
+
+public class Employee1 {
+	int salary;
+	String ename;
+	String designation;
+	public void work(String ename,String designation) {
+		this.ename=ename;
+		this.designation=designation;
+		System.out.println("Employee work");
+		
+		
+	}
+	public int getSalary(int salary) {
+		this.salary=salary;
+		return salary;
+	}
+
+}
+//child class
+package inheritance;
+
+public class Hrmanager extends Employee1 {
+String	hname;
+String hdesignation;
+int hsalary;
+	
+	public void work(String ename,String designation) {
+		this.ename=ename;
+		this.designation=designation;
+		System.out.println("Maintain the workfrom hr side");
+	}
+	public int getSalary(int salary) {
+		this.salary=salary;
+		return salary;
+	}
+ public void AddEmployee(String hname,String hdesignation,int hsalary) {
+	this.hname=hname;
+	this.hsalary=hsalary;
+	this.hdesignation=hdesignation;
+	System.out.println("Adding new Employeees are");
+	 
+ }
+
+}
+//main method
+package inheritance;
+
+public class EmployeeDriver {
+
+	public static void main(String[] args) {
+		Employee1 emp=new Employee1();
+		emp.work("Siddhu", "Developer");
+	System.out.println("The employee name is"+emp.ename +""+emp.designation);
+	int sal=emp.getSalary(60000);
+	System.out.println("The employee salary is:"+sal);
+	
+	Hrmanager hr=new Hrmanager();
+	hr.work("Hari", "HRmanager");
+	int salry=hr.getSalary(80000);
+	System.out.println(salry);
+	System.out.println("*********************");
+	
+	hr.AddEmployee("Helen", "HRm", 500000);
+	System.out.println("new employeename\t"   +hr.hname +"\t" +"Desig\t" +hr.hdesignation+ "\tSalary\t" +" "+hr.hsalary);
+	
+	
+	
+	
+
+	}
+
+}
+
+
